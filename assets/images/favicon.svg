@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6C63FF"/>
+      <stop offset="1" stop-color="#00C2FF"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="28" height="28" rx="6" fill="url(#g)"/>
+  <!-- Simple JJ monogram sized for small favicons -->
+  <path fill="#fff" d="M10 7h3v13.5c0 3.2-2.2 5.5-5.5 5.5H6v-3h1.5c1.5 0 2.5-1.1 2.5-2.5V7Zm12 0h3v13.5c0 3.2-2.2 5.5-5.5 5.5H15v-3h4.5c1.5 0 2.5-1.1 2.5-2.5V7Z"/>
+</svg>

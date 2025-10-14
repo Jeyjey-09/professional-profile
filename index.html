@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>John Julius David — Professional Profile</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="menu-toggle" id="menuToggle" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle menu">&#9776;</button>
+      <div class="logo">
+        Jhayjay<span class="dot">.</span>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <nav class="mainnav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="certs.html">Certification</a></li>
+          <li><a href="advocacy.html">Advocacy</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <aside class="sidebar" id="sidebar">
+    <h3>Menu</h3>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="certs.html">Certifications</a></li>
+      <li><a href="advocacy.html">Advocacy</a></li>
+      <li><a href="portfolio.html">Portfolio (Layout)</a></li>
+    </ul>
+  </aside>
+
+  <main>
+    <section class="hero" style="background-image: url('assets/images/hero-bg5.jpg')">
+      <div class="hero-inner">
+        <img src="assets/images/profile.jpg" alt="Profile" class="avatar" />
+        <div class="hero-content">
+          <h1>John Julius David</h1>
+            <ul class="snippets">
+              <li>Back‑end Developer</li>
+              <li>TPS Awardee</li>
+              <li>ACM Member</li>
+              <li>Tech Enthusiast</li>
+            </ul>
+          <p class="subtitle">Computer Science Student at FEU Institute of Technology — Aspiring Software Engineer</p>
+          <p class="cta">
+            <button class="btn" id="btnResume" type="button">View Resume</button>
+            <button class="btn ghost" id="btnContact" type="button">Contact Me</button>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bio">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>I'm John Julius David, but you can call me Jj. I'm a Computer Science student at FEU Institute of Technology with a strong passion for innovation. In the field of tech, I specialize in back-end development, though I occasionally explore front-end projects. I'm proficient in multiple programming languages including Python, Java, and C, and I'm continuously expanding my skills to deepen my expertise and adaptability in software development.</p>
+      </div>
+    </section>
+
+    <section class="highlights">
+      <div class="container">
+        <h2>Highlights</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>🎓 Education</h3>
+            <p>BS Computer Science at FEU Tech — ongoing</p>
+          </article>
+          <article class="card">
+            <h3>💼 Experience</h3>
+            <p>ACM Member, Java Boot Camp, Tech Quiz</p>
+          </article>
+          <article class="card">
+            <h3>🛠️ Skills</h3>
+            <p>Java, Python, C++, Back-end Development</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <header class="modal-header">
+        <h2 id="modalTitle">Notice</h2>
+        <button class="modal-close" type="button" aria-label="Close" data-close>&times;</button>
+      </header>
+      <div class="modal-body" id="modalBody">
+        <!-- dynamic content injected by script.js -->
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <small>&copy; <span id="year"></span> John Julius David — All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

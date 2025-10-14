@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Education — John Julius David</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="menu-toggle" id="menuToggle" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle menu">&#9776;</button>
+      <div class="logo">Jhayjay<span class="dot">.</span></div>
+    </div>
+    <div class="topbar-right">
+      <nav class="mainnav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="active"><a href="education.html">Education</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="certs.html">Certification</a></li>
+          <li><a href="advocacy.html">Advocacy</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <aside class="sidebar" id="sidebar">
+    <h3>Menu</h3>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="certs.html">Certifications</a></li>
+      <li><a href="advocacy.html">Advocacy</a></li>
+      <li><a href="portfolio.html">Portfolio (Layout)</a></li>
+    </ul>
+  </aside>
+
+  <main class="container page">
+    <h1>Education</h1>
+    <div class="table-responsive">
+      <table class="table" aria-describedby="education-caption">
+        <thead>
+          <tr>
+            <th scope="col" class="col-logo">School</th>
+            <th scope="col">Level</th>
+            <th scope="col">Years</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="school-cell">
+              <img class="school-logo" src="assets/images/feu.png" alt="FEU Tech logo" onerror="this.style.display='none'" />
+              <span class="school-name">FEU Institute of Technology</span>
+            </td>
+            <th scope="row">BS Computer Science</th>
+            <td>2022 — 2025</td>
+          </tr>
+          <tr>
+            <td class="school-cell">
+              <img class="school-logo" src="assets/images/mdsf.png" alt="Montessori De Sagrada Familia logo" onerror="this.style.display='none'" />
+              <span class="school-name">Montessori De Sagrada Familia, Inc.</span>
+            </td>
+            <th scope="row">High School</th>
+            <td>2016 — 2022</td>
+          </tr>
+          <tr>
+            <td class="school-cell">
+              <img class="school-logo" src="assets/images/icsb.jpg" alt="Immaculate Conception School of Baliuag logo" onerror="this.style.display='none'" />
+              <span class="school-name">Immaculate Conception School of Baliuag</span>
+            </td>
+            <th scope="row">Elementary School</th>
+            <td>2008 — 2016</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container"><small>&copy; <span id="year2"></span> John Julius David</small></div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
