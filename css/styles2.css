@@ -1,0 +1,516 @@
+/* Dark theme for portfolio2.html — styles2.css */
+
+:root {
+  --bg: #0b0f13;
+  --surface: #0f1619;
+  --card: #11161a;
+  --muted: #98a0a6;
+  --text: #e6eef2;
+  --accent: #56b6f9; /* blue */
+  --accent-2: #7c5cff; /* purple */
+  --danger: #ff6b6b;
+  --glass: rgba(255, 255, 255, 0.03);
+  --border: rgba(255, 255, 255, 0.06);
+  --shadow: 0 6px 18px rgba(2, 6, 9, 0.6);
+  --radius: 10px;
+  font-family: "Segoe UI", Roboto, -apple-system, "Helvetica Neue", Arial;
+}
+
+/* Global */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  /* Unified solid background to prevent perceived shift from dark blue to near-black */
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.45;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+.page {
+  padding: 2rem 1rem;
+  max-width: 960px; /* center and constrain main content width */
+  margin: 0 auto;
+}
+
+/* Topbar/header */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid var(--border);
+  /* Solid surface color for consistency across pages */
+  background: var(--surface);
+  position: sticky;
+  top: 0;
+  z-index: 30;
+}
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.logo {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--text);
+}
+.logo .dot {
+  color: var(--accent-2);
+}
+
+.menu-toggle {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.35rem 0.6rem;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.menu-toggle:hover {
+  background: rgba(86, 182, 249, 0.15);
+}
+.menu-toggle:focus {
+  outline: 2px solid rgba(86, 182, 249, 0.15);
+  outline-offset: 2px;
+}
+
+.topbar-right .mainnav ul {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.mainnav a {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 0.5rem 0.65rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.mainnav a:hover {
+  color: var(--text);
+  background: var(--glass);
+}
+.mainnav .active a {
+  color: var(--text);
+  background: linear-gradient(
+    90deg,
+    rgba(124, 92, 255, 0.12),
+    rgba(86, 182, 249, 0.06)
+  );
+  border: 1px solid rgba(124, 92, 255, 0.08);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  padding: 1rem;
+  position: fixed;
+  left: 1rem;
+  top: 72px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  color: var(--muted);
+  display: none;
+  z-index: 40;
+}
+.sidebar.active {
+  display: block;
+}
+.sidebar h3 {
+  color: var(--text);
+  margin-top: 0;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar a {
+  display: block;
+  color: var(--muted);
+  padding: 0.45rem;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.sidebar a:hover {
+  color: var(--text);
+  background: var(--glass);
+}
+
+/* Main content layout — leave space for sidebar on wider screens (moved into media query)
+   The sidebar will be hidden on desktop so the submenu only appears on mobile via the
+   hamburger. */
+
+/* Center the main page content and headings for a cleaner layout */
+main.container.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main.container.page > h1,
+main.container.page > p {
+  text-align: center;
+}
+
+/* Ensure content sections stretch full width inside the centered page */
+main.container.page > section {
+  width: 100%;
+}
+
+/* Page header */
+h1 {
+  margin-top: 0;
+  color: var(--text);
+}
+p {
+  color: var(--muted);
+}
+
+/* Projects grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+.project {
+  display: block; /* anchor becomes block */
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  color: inherit;
+  text-decoration: none;
+}
+.project:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(2, 6, 9, 0.7);
+}
+.project img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  display: block;
+  margin-bottom: 0.7rem;
+}
+.project h3 {
+  margin: 0 0 0.35rem 0;
+  color: var(--text);
+}
+.project p {
+  margin: 0 0 0.85rem 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.project:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(2, 6, 9, 0.7);
+}
+
+/* Make titles stand out in card links */
+.project h3 {
+  margin-top: 0.2rem;
+}
+
+/* Desktop: force 2 columns (2x2 for four cards) */
+@media (min-width: 700px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.55rem 0.85rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text);
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border: none;
+  font-weight: 700;
+}
+.btn.small {
+  padding: 0.4rem 0.6rem;
+  font-size: 0.9rem;
+}
+
+.notice {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    rgba(124, 92, 255, 0.06),
+    rgba(86, 182, 249, 0.03)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  color: var(--text);
+}
+.notice .u-upcase {
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+/* Footer */
+.footer {
+  margin-top: 2.5rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+}
+
+/* Center footer content inside its container */
+.footer .container {
+  text-align: center;
+}
+
+/* Responsive: collapse sidebar below 900px */
+@media (max-width: 900px) {
+  .sidebar {
+    position: fixed;
+    left: 1rem;
+    right: 1rem;
+    top: 72px;
+    width: auto;
+    max-width: 280px;
+  }
+  main.container.page {
+    margin-left: 0;
+    padding-top: 0;
+  }
+  .topbar {
+    position: sticky;
+  }
+  .topbar-right .mainnav {
+    display: none;
+  }
+  .menu-toggle {
+    display: inline-flex;
+  }
+}
+
+@media (min-width: 901px) {
+  /* On large screens hide the mobile sidebar/submenu so the left submenu only
+     appears in mobile form (via hamburger). Keep desktop navigation in the topbar. */
+  .sidebar {
+    display: none;
+  }
+
+  /* Remove the left margin when sidebar is hidden */
+  main.container.page {
+    /* Keep the page centered on desktop */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Small print: make focus states accessible */
+a:focus,
+button:focus {
+  outline: 2px dashed rgba(86, 182, 249, 0.18);
+  outline-offset: 3px;
+}
+
+/* Utility classes (used in HTML) */
+.u-upcase {
+  text-transform: uppercase;
+}
+
+/* Project detail page styles */
+.project-hero {
+  text-align: center;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.25rem;
+  box-shadow: var(--shadow);
+}
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text);
+  border: 1px solid rgba(124, 92, 255, 0.25);
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    rgba(124, 92, 255, 0.15),
+    rgba(86, 182, 249, 0.1)
+  );
+  margin-bottom: 0.35rem;
+}
+.project-title {
+  margin: 0.2rem 0;
+}
+.project-subtitle {
+  color: var(--muted);
+  margin-top: 0;
+}
+
+.btn.secondary {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.project-overview {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+@media (min-width: 800px) {
+  .project-overview {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+}
+.meta-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+}
+.meta-card h3 {
+  margin-top: 0;
+}
+.meta-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: var(--muted);
+}
+.meta-card li {
+  padding: 0.25rem 0;
+}
+
+.section-title {
+  margin: 1.25rem 0 0.5rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.85rem;
+}
+
+/* Force 2x2 layout for exactly four features on wider screens */
+@media (min-width: 720px) {
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.feature {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.9rem;
+}
+.feature h4 {
+  margin: 0.4rem 0;
+  color: var(--text);
+}
+.feature p {
+  margin: 0;
+  color: var(--muted);
+}
+.feature-icon {
+  font-size: 1.25rem;
+}
+
+.screenshot {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: var(--shadow);
+}
+
+/* Modifier: show full image without cropping for specific cases */
+.screenshot--contain {
+  height: auto;
+  max-height: 640px; /* prevent runaway height on huge images */
+  object-fit: contain;
+  background: var(--surface); /* subtle backdrop for any letterboxing */
+}
+
+/* Portrait screenshots layout (Project 2) */
+.screenshots-grid {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  margin-top: 0.75rem;
+}
+.screenshot--landscape {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  width: 100%;
+  background: var(--surface); /* backdrop for letterboxing */
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 10px;
+}
+.screenshot--portrait {
+  aspect-ratio: 9 / 16; /* portrait ratio */
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 14px;
+}
+.screenshot-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+.screenshot-wrapper--landscape {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  max-width: 700px; /* constrain width for better centering */
+  margin: 0 auto; /* center the card */
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow);
+}
+.screenshot-wrapper figcaption {
+  font-size: 0.7rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+}

@@ -1,71 +1,118 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portfolio — John Julius David</title>
-  <link rel="icon" type="image/svg+xml" href="assets/images/icon.png" />
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
-<body>
-  <header class="topbar">
-    <div class="topbar-left">
-      <button class="menu-toggle" id="menuToggle" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle menu">&#9776;</button>
-      <div class="logo">Jhayjay<span class="dot">.</span></div>
-    </div>
-    <div class="topbar-right">
-      <nav class="mainnav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="education.html">Education</a></li>
-          <li><a href="experience.html">Experience</a></li>
-          <li><a href="skills.html">Skills</a></li>
-          <li><a href="certs.html">Certification</a></li>
-          <li><a href="advocacy.html">Advocacy</a></li>
-          <li class="active"><a href="portfolio.html">Portfolio</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  
-  <aside class="sidebar" id="sidebar">
-    <h3>Menu</h3>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="education.html">Education</a></li>
-      <li><a href="experience.html">Experience</a></li>
-      <li><a href="skills.html">Skills</a></li>
-      <li><a href="certs.html">Certifications</a></li>
-      <li><a href="advocacy.html">Advocacy</a></li>
-      <li><a href="portfolio.html">Portfolio (Layout)</a></li>
-    </ul>
-  </aside>
-
-  <main class="container page">
-    <h1>Portfolio</h1>
-    <p>Here are some of the projects I've worked on, showcasing my skills in software development and innovation.</p>
-
-    <section class="projects-grid">
-      <article class="project">
-        <img src="assets/images/sample-project-thumb.jpg" alt="Food Case project thumbnail">
-        <h3>BiteBox</h3>
-        <p>An innovative app that helps users discover restaurants by automatically selecting dining options based on their preferences and location.</p>
-        <a class="btn small" href="https://github.com/FuseBucks/food-case">Details</a>
-      </article>
-
-      <article class="project">
-        <img src="assets/images/sample-project-thumb.jpg" alt="Sentishop project thumbnail">
-        <h3>Sentishop</h3>
-        <p>A web application that analyzes Lazada product reviews using sentiment analysis to help customers make informed purchasing decisions.</p>
-        <a class="btn small" href="https://github.com/The-Thesis-Gods/SentiShop">Details</a>
-      </article>
-    </section>
-      <div role="status" aria-live="polite" class="notice">
-        This page is <span class="u-upcase">in progress</span>. More updates are coming soon.
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Portfolio — John Julius David</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/icon.png" />
+    <link rel="stylesheet" href="css/styles2.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-left">
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-controls="sidebar"
+          aria-expanded="false"
+          aria-label="Toggle menu"
+        >
+          &#9776;
+        </button>
+        <div class="logo">Jhayjay<span class="dot">.</span></div>
       </div>
+      <div class="topbar-right">
+        <nav class="mainnav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects/project1.html">SentiShop</a></li>
+            <li><a href="projects/project2.html">BiteBox</a></li>
+            <li><a href="projects/project3.html">Ervirus</a></li>
+            <li><a href="projects/project4.html">SortItOut</a></li>
+            <li class="active"><a href="portfolio2.html">Portfolio</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <aside class="sidebar" id="sidebar">
+      <h3>Menu</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects/project1.html">SentiShop</a></li>
+        <li><a href="projects/project2.html">BiteBox</a></li>
+        <li><a href="projects/project3.html">Ervirus</a></li>
+        <li><a href="projects/project4.html">SortItOut</a></li>
+        <li class="active"><a href="portfolio.html">Portfolio</a></li>
+      </ul>
+    </aside>
+
+    <main class="container page">
+      <h1>Portfolio</h1>
+      <p>
+        Here are some of the projects I've worked on, showcasing my skills in
+        software development and innovation.
+      </p>
+
+      <section class="projects-grid">
+        <a class="project" href="projects/project1.html">
+          <img
+            src="assets/images/projects/sentishop.jpg"
+            alt="SentiShop project thumbnail"
+          />
+          <h3>SentiShop</h3>
+          <p>
+            A web application that analyzes Lazada product reviews using
+            sentiment analysis to help customers make informed purchasing
+            decisions.
+          </p>
+        </a>
+
+        <a class="project" href="projects/project2.html">
+          <img
+            src="assets/images/projects/bitebox.jpg"
+            alt="BiteBox project thumbnail"
+          />
+          <h3>BiteBox</h3>
+          <p>
+            An innovative app that helps users discover restaurants by
+            automatically selecting dining options based on their preferences
+            and location.
+          </p>
+        </a>
+
+        <a class="project" href="projects/project3.html">
+          <img
+            src="assets/images/projects/ervirus.jpg"
+            alt="Ervirus project thumbnail"
+          />
+          <h3>Ervirus</h3>
+          <p>
+            An incremental virus-themed game where players evolve, mutate, and
+            expand a digital pathogen through strategic upgrades and progressive
+            mechanics.
+          </p>
+        </a>
+
+        <a class="project" href="projects/project4.html">
+          <img
+            src="assets/images/projects/sortitout.jpg"
+            alt="SortItOut project thumbnail"
+          />
+          <h3>SortItOut</h3>
+          <p>
+            A visualization website that demonstrates how various sorting
+            algorithms work through interactive and dynamic animations.
+          </p>
+        </a>
+      </section>
     </main>
 
-  <footer class="footer"><div class="container"><small>&copy; <span id="year7"></span> John Julius David</small></div></footer>
-  <script src="js/script.js"></script>
-</body>
+    <footer class="footer">
+      <div class="container">
+        <small>&copy; <span id="year7"></span> John Julius David</small>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
 </html>

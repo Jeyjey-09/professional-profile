@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>SentiShop — Project</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/images/icon.png" />
+    <link rel="stylesheet" href="../css/styles2.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-left">
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-controls="sidebar"
+          aria-expanded="false"
+          aria-label="Toggle menu"
+        >
+          &#9776;
+        </button>
+        <div class="logo">Jhayjay<span class="dot">.</span></div>
+      </div>
+      <div class="topbar-right">
+        <nav class="mainnav">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li class="active"><a href="./project1.html">SentiShop</a></li>
+            <li><a href="./project2.html">BiteBox</a></li>
+            <li><a href="./project3.html">Ervirus</a></li>
+            <li><a href="./project4.html">SortItOut</a></li>
+            <li><a href="../portfolio.html">Portfolio</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <aside class="sidebar" id="sidebar">
+      <h3>Menu</h3>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="project1.html">SentiShop</a></li>
+        <li><a href="project2.html">BiteBox</a></li>
+        <li><a href="project3.html">Ervirus</a></li>
+        <li><a href="project4.html">SortItOut</a></li>
+        <li class="active"><a href="../portfolio.html">Portfolio</a></li>
+      </ul>
+    </aside>
+
+    <main class="container page">
+      <section class="project-hero">
+        <span class="badge">Sentiment Analysis</span>
+        <h1 class="project-title">SentiShop</h1>
+        <p class="project-subtitle">
+          Analyze Lazada product reviews to make smarter buying decisions.
+        </p>
+        <div class="actions">
+          <a
+            class="btn small"
+            href="https://github.com/The-Thesis-Gods/SentiShop"
+            target="_blank"
+            rel="noopener"
+            >View on GitHub</a
+          >
+          <a class="btn small secondary" href="../portfolio2.html"
+            >Back to Portfolio</a
+          >
+        </div>
+      </section>
+
+      <section class="project-overview">
+        <div>
+          <h2 class="section-title">Overview</h2>
+          <p>
+            SentiShop collects and analyzes customer reviews from Lazada,
+            applying natural language processing to determine overall sentiment
+            and highlight insights that help shoppers purchase with confidence.
+          </p>
+          <p>
+            The app provides a clean dashboard summarizing positive and negative
+            trends for each product, with drill-down to individual review
+            detail.
+          </p>
+        </div>
+        <aside class="meta-card">
+          <h3>Project Info</h3>
+          <ul>
+            <li><strong>Role:</strong> Project Manager</li>
+            <li><strong>Type:</strong> Thesis / Research</li>
+            <li>
+              <strong>Stack:</strong> Python, Django, Hugging Face, HTML/CSS/JS
+            </li>
+          </ul>
+        </aside>
+      </section>
+
+      <section>
+        <h2 class="section-title">Key Features</h2>
+        <div class="feature-grid">
+          <div class="feature">
+            <div class="feature-icon">🔍</div>
+            <h4>Review Scraping</h4>
+            <p>
+              Fetch product reviews from Lazada and clean the data for analysis.
+            </p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">📊</div>
+            <h4>Sentiment Analysis</h4>
+            <p>
+              Classify reviews as positive or negative using XLM-RoBERTa model.
+            </p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">⚡</div>
+            <h4>Real-time Insights</h4>
+            <p>See summaries and trends update as reviews are analyzed.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🎯</div>
+            <h4>Actionable UI</h4>
+            <p>Simple dashboards and filters to focus on what matters most.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Screenshots</h2>
+        <img
+          class="screenshot screenshot--contain"
+          src="../assets/images/projects/sentishop-samp.png"
+          alt="SentiShop interface screenshot"
+        />
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <small>&copy; <span id="year"></span> John Julius David</small>
+      </div>
+    </footer>
+    <script src="../js/script.js"></script>
+  </body>
+</html>
